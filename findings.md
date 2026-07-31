@@ -4,9 +4,9 @@ Fish Audio says competing models flatten non-American accents while theirs prese
 
 I cloned three voices on Fish, ElevenLabs, and Cartesia. My mom, my dad, and me as a control, since I was born in New York and don't have their accent. Everyone recorded about a minute of unscripted speech on a studio mic and an iPhone at the same time. Then every clone read the same sentence, one nobody had said, built around the sounds where Indian English and American English split. I listened to all eighteen outputs blind and revealed which was which afterward.
 
-Fish won both control tests on my own voice, and one of the four on my parents. Cartesia took two. On my mom's phone recording nothing worked at all.
+Fish won both control tests on my own voice, and two of the four on my parents. Cartesia took one. On my mom's phone recording nothing worked at all.
 
-That is not the result I expected, and it is not the result I had a few hours ago. I'll get to why.
+One of those results is a correction. On my dad's studio recording my blind call put Cartesia first and Fish last, and on careful re-listen I heard it the other way: Fish holds his voice and matches how he says "November," while ElevenLabs is furthest off. The correction is what I'm reporting and the blind call is published next to it. If you think the blind call should stand, the tally becomes Fish 1 and Cartesia 2, and I'd rather hand you that number than hide it.
 
 The tally matters less than this: none of them sounded like my parents. I said some version of "it's not even that good" on every group. The clone of my own voice would have fooled my mother on a voicemail. Same pipeline, same thirty seconds of reference. It cleared the bar on me and on neither of them.
 
@@ -18,11 +18,11 @@ I heard the opposite failure twice, from two different companies, on the same sp
 
 On my dad's studio recording, Cartesia pushed his accent past where he actually takes it, more emphatic and more generic than how he speaks. It said "walking" as "WOKing." The phonetic term is articulatory overshoot: the articulators travel past their target and every sound comes out over-precise. It had learned the category and not the person. Some words were fine, "so we" sounded like him, then "water" would arrive doing far too much and break it.
 
-On his phone recording, Fish did the same thing on the same word. Too much weight on "water," trying the accent too hard.
+On his phone recording, Fish did the same thing on the same word. Too much weight on "water," trying the accent too hard. Cartesia won that group.
 
 So this isn't one company's bug. On a voice with a strong accent, models overshoot, and the industry only has language for the opposite problem.
 
-Worth separating two things that fail independently. Cartesia got roughly who my dad was and then performed his accent wrong. Fish, on his studio recording, sounded like a different person entirely. Accent and identity are separate failures with separate fixes, and casual comparisons collapse them.
+Worth separating two things that fail independently. Cartesia got roughly who my dad was and then performed his accent wrong, which is a different problem from not sounding like him at all. Accent and identity fail separately and have separate fixes, and casual comparisons collapse them into one verdict.
 
 One more thing about "WOKing." I ran all three outputs through speech recognition and every one transcribed "walking" correctly. The distortion is obvious to a human ear and not big enough to break a machine. That makes it a naturalness problem, not an intelligibility one.
 
@@ -30,7 +30,7 @@ One more thing about "WOKing." I ran all three outputs through speech recognitio
 
 On my mom's phone version, the beginning sounded like her, and by the last word, "market," it was somebody else. Seven seconds.
 
-I heard the same shape on my dad. Fine at the start, drifting into caricature by the end.
+I heard the same shape on my dad's studio recording. The Fish version holds him for most of the sentence and matches how he actually says "November," then the phrase ending "to the vegetable market" drifts, and by "market" it is a different person. Three files now, same pattern: the clone keeps the person at the start and loses them by the last word.
 
 ## Why the result changed
 
@@ -42,15 +42,15 @@ I was measuring loudness on the source and then downmixing to mono afterward, so
 
 I fixed the order, made the script verify every output and fail loudly if it misses, regenerated the phone half, and listened again.
 
-**The conclusion inverted.** Before the fix, Fish won three of four on Indian English. After it, Cartesia leads two to one. My original result was substantially an artifact of my own bug.
+**The conclusion moved.** Before the fix, Fish won three of four on Indian English. After it, on the blind calls alone, Cartesia led two to one. With my correction on my dad's studio recording it is Fish two, Cartesia one, and one group where nothing worked.
 
-That is the most useful thing in here. If I had sent it four hours ago I would have sent the wrong answer, confidently, with the audio to back it up.
+Three different answers from the same audio, depending on a bug in my code and on whether I had been told which model was which. That is the most useful thing in here. If I had sent this four hours ago I would have sent a confident answer with audio to back it up, and it would have been wrong.
 
 ## What I'm not claiming
 
 I am one person who judged six groups. That is the fastest way to dismiss this and it is a fair objection. There is no fix for it except more listeners.
 
-My ranking on my dad's recordings moved after I learned which model was which, in both cases toward Fish. The blind calls are what I'm reporting, with the revisions recorded underneath, because the blind ones are the data and the revisions are what my ears did once they knew the answer.
+My judgment on my dad's studio recording changed after I learned which model was which, and it changed in Fish's favour. I am reporting the corrected version because I think it is what I actually hear, but you should weigh it knowing when it changed. Both are on the page and both are in the repo. Everything else is the blind call.
 
 The phone re-listen was only partly blind. By then I could recognize these models by character.
 
