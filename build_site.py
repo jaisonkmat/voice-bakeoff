@@ -102,7 +102,7 @@ for sp in cases["speakers"]:
                 f'<td class="q">{html.escape(j["comment"])}</td></tr>')
             continue
         best = "no winner" if j.get("no_winner") else label_of.get(j["best"], j["best"])
-        worst = label_of.get(j["worst"]) if j.get("worst") else "&mdash;"
+        worst = label_of.get(j["worst"]) if j.get("worst") else "not recorded"
         note = html.escape(j["comment"])
         blind_rows.append(
             f'<tr><td>{html.escape(sp["label"])} ({html.escape(cap["label"])})</td>'
