@@ -23,7 +23,7 @@ from dotenv import load_dotenv
 load_dotenv()
 ROOT = Path(__file__).parent
 PREPARED = ROOT / "refs_prepared"
-AUDIO = ROOT / "site" / "audio"
+AUDIO = ROOT / "docs" / "audio"
 
 cases = json.loads((ROOT / "cases.json").read_text())
 TEXT = cases["test_sentence"]

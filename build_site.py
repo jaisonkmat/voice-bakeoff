@@ -44,7 +44,7 @@ def md(text):
 
 def player(path, label, is_ref=False):
     cls = "who ref" if is_ref else "who"
-    if not (ROOT / "site" / path).exists():
+    if not (ROOT / "docs" / path).exists():
         return f'<span class="{cls}">{label}</span><div class="slot">missing</div>'
     return (f'<span class="{cls}">{label}</span>'
             f'<audio controls preload="none" src="{path}"></audio>')
@@ -141,7 +141,7 @@ limitations = [
     "Fish's reference enhancement was disabled so that it would not repair the phone track while the other two received it raw. Defensible for a controlled comparison, but it means this is not a test of each provider's default first-use workflow.",
 ]
 
-CSS = (ROOT / "site" / "index.html").read_text()
+CSS = (ROOT / "docs" / "index.html").read_text()
 CSS = CSS[CSS.find("<style>"):CSS.find("</style>") + 8]
 
 page = f"""<!doctype html>
@@ -219,7 +219,7 @@ Not affiliated with Fish Audio, ElevenLabs, or Cartesia. All voices recorded and
 </html>
 """
 
-out = ROOT / "site" / "index.html"
+out = ROOT / "docs" / "index.html"
 out.write_text(page)
 print(f"Wrote {out}")
 print(f"  {len(results)} results, {len(blind_rows)} judgment rows, {len(listen)} speakers")

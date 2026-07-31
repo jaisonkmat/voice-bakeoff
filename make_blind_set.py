@@ -18,7 +18,7 @@ import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).parent
-AUDIO = ROOT / "site" / "audio"
+AUDIO = ROOT / "docs" / "audio"
 BLIND = ROOT / "listen"
 SEED = 20260730
 

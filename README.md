@@ -27,14 +27,14 @@ cases.json              the manifest: speakers, captures, providers, test senten
 refs/                   raw full-length recordings (gitignored, never published)
 run.py                  the harness
 results.json            raw timings, character counts, and costs
-site/index.html         the published page
-site/audio/reference/   short trimmed clips of each original voice
-site/audio/fish/        generated audio
-site/audio/elevenlabs/
-site/audio/cartesia/
+docs/index.html         the published page
+docs/audio/reference/   short trimmed clips of each original voice
+docs/audio/fish/        generated audio
+docs/audio/elevenlabs/
+docs/audio/cartesia/
 ```
 
-Generated audio lives under `site/` and is committed, because the published page has to be able to play it. The full-length reference recordings are not committed; only short trimmed clips are, which is enough to judge the comparison without publishing several minutes of someone's family talking.
+Generated audio lives under `docs/` and is committed, because the published page has to be able to play it. The full-length reference recordings are not committed; only short trimmed clips are, which is enough to judge the comparison without publishing several minutes of someone's family talking.
 
 ## Reproduce this
 
