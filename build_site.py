@@ -124,8 +124,8 @@ controls = [
     ("One speaker is a control.", "American English, which all three should handle. Without it, a poor result on the accented voices is ambiguous between an accent problem and a general limit of 30-second cloning."),
     ("Identical input to every provider.", "All references trimmed to exactly 30.000s, downmixed to mono, resampled to 48kHz, and loudness-matched to -20 LUFS with two-pass EBU R128 in linear mode, which is one constant gain and no change to dynamics. Source levels ranged from -23.6 to -28.9 LUFS, so matching was necessary. Every output file is measured after processing and the run fails loudly if any file misses target by more than 0.5 LU."),
     ("Fish's reference enhancement was disabled.", "Fish cleans up reference audio by default. Left on, it would have repaired the phone track while the other two providers received it raw, which would have destroyed the studio versus phone comparison."),
-    ("Three runs per case, medians reported.", "A single latency sample is noise. The single-run smoke test measured Fish at 519ms; across 18 measurements it is 224ms."),
-    ("Both microphones captured the same take.", "Studio and phone tracks were aligned in Logic and cut at identical timestamps, so recording quality is the only thing that changes between them."),
+    ("Three runs per case, medians reported.", "A single latency sample is noise. An early single-run test measured Fish at 519ms; across 18 measurements the median is closer to 230ms. Note that only the first generation of each case is the one that was listened to, so any preference could in principle be a sample-selection artifact."),
+    ("Both microphones captured the same take.", "Studio and phone tracks were aligned in Logic before export and cut at identical timestamps, so recording quality is the only intended difference between them. The alignment was done by hand in a DAW and is not verified by the code."),
     ("Every voice was recorded with consent, for this purpose.", "No scraped audio, no film clips, no public figures."),
 ]
 

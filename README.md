@@ -8,6 +8,14 @@ Fish Audio says competing text-to-speech models produce "flattened prosody, neut
 
 That is specific and testable. This repo tests it.
 
+## Result
+
+Single listener, six blind group judgments. On the American English control, Fish won both. On Indian English, Fish took two of four, Cartesia one, and one group had no winner because all three were bad.
+
+None of the clones sounded convincingly like the two Indian English speakers. The control clone did, which is what makes the shortfall look accent-specific rather than a general limit of cloning from 30 seconds.
+
+Full write-up, audio, and stated limitations: https://jaisonkmat.github.io/voice-bakeoff/
+
 ## Method
 
 Three speakers, each recorded for roughly 30 seconds of unscripted speech. Each recording is used as the cloning reference for Fish Audio, ElevenLabs, and Cartesia. Every resulting clone reads the same sentence:
@@ -23,15 +31,18 @@ Full method, controls, and stated limitations are on the published page.
 ## Layout
 
 ```
-cases.json              the manifest: speakers, captures, providers, test sentence
+cases.json              speakers, capture types, providers, test sentence, reference windows
 refs/                   raw full-length recordings (gitignored, never published)
-run.py                  the harness
-results.json            raw timings, character counts, and costs
-docs/index.html         the published page
-docs/audio/reference/   short trimmed clips of each original voice
-docs/audio/fish/        generated audio
-docs/audio/elevenlabs/
-docs/audio/cartesia/
+prep_refs.py            trim, downmix, resample, loudness-match, verify
+transcribe.py           checks references for test-sentence collisions
+collision_check.json    that check's output, with timestamps
+run.py                  the harness: clone, generate, time, clean up
+results.json            raw timings for all 54 generations
+make_blind_set.py       seeded shuffle into a blind listening set
+judgments.json          what was heard, per group
+findings.md             the write-up
+build_site.py           renders docs/index.html from all of the above
+docs/                   the published page and its audio
 ```
 
 Generated audio lives under `docs/` and is committed, because the published page has to be able to play it. The full-length reference recordings are not committed; only short trimmed clips are, which is enough to judge the comparison without publishing several minutes of someone's family talking.

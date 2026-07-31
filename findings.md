@@ -20,17 +20,19 @@ On his phone recording, Fish did the same thing on the same word. Too much weigh
 
 So this isn't one company's bug. On a voice with a strong accent, models overshoot, and the industry only has language for the opposite problem.
 
-Worth separating two things that fail independently. Cartesia got roughly who my dad was and then performed his accent wrong, which is a different problem from not sounding like him at all. Accent and identity fail separately and have separate fixes, and casual comparisons collapse them into one verdict.
+Worth separating two things that fail independently. On my dad's studio recording Cartesia got roughly who he was and then performed his accent wrong, while ElevenLabs went flat and lost the accent entirely. Those are different failures with different fixes, and a single "which sounds best" question collapses them into one verdict.
 
 One more thing about "WOKing." I ran all three outputs through speech recognition and every one transcribed "walking" correctly. The distortion is obvious to a human ear and not big enough to break a machine. That makes it a naturalness problem, not an intelligibility one.
 
 ## The clone stops being the person mid-sentence
 
-On my mom's phone version, the beginning sounded like her, and by the last word, "market," it was somebody else. Seven seconds.
+On my dad's studio recording, the Fish version holds him for most of the sentence and matches how he actually says "November." Then the phrase ending "to the vegetable market" drifts, and by "market" it is a different person.
 
-I heard the same shape on my dad's studio recording. The Fish version holds him for most of the sentence and matches how he actually says "November," then the phrase ending "to the vegetable market" drifts, and by "market" it is a different person. Three files now, same pattern: the clone keeps the person at the start and loses them by the last word.
+That is a seven-second sentence. The model keeps him at the start and loses him by the last word.
 
-## Why the result changed
+I heard the same shape on my mom's phone version during an earlier run, before I found the bug described below and regenerated that audio. I have not re-confirmed it on the corrected files, so treat it as one observation rather than two.
+
+## The bug that changed half the result
 
 I asked a model to attack this study before I published it. Its criticism was that I asserted my loudness normalization worked without ever measuring the output.
 
@@ -40,7 +42,7 @@ I was measuring loudness on the source and then downmixing to mono afterward, so
 
 I fixed the order, made the script verify every output and fail loudly if it misses, regenerated the phone half, and listened again.
 
-**The result changed.** Before the fix, my mom's and dad's phone groups were judged on references that were up to 10.7 dB quiet. After regenerating them, my mom's phone group went from a clear winner to nothing working at all, and my dad's phone group went to Cartesia.
+**Two of six groups changed.** Before the fix, my mom's and dad's phone groups were judged on references up to 10.7 dB below target. After regenerating them, my mom's phone group went from having a clear winner to nothing working at all, and my dad's phone group went to Cartesia.
 
 If I had sent this before running that check, I would have sent a confident answer with audio to back it up, and part of it would have been wrong.
 
