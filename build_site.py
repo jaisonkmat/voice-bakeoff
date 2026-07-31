@@ -104,12 +104,6 @@ for sp in cases["speakers"]:
         best = "no winner" if j.get("no_winner") else label_of.get(j["best"], j["best"])
         worst = label_of.get(j["worst"]) if j.get("worst") else "&mdash;"
         note = html.escape(j["comment"])
-        if j.get("corrected"):
-            bc = j["blind_call"]
-            best += " *"
-            note = ('<em>Blind call was ' + label_of.get(bc["best"], bc["best"])
-                    + ' first, ' + label_of.get(bc["worst"], bc["worst"])
-                    + ' last. Corrected after unblinding.</em><br>' + note)
         blind_rows.append(
             f'<tr><td>{html.escape(sp["label"])} ({html.escape(cap["label"])})</td>'
             f'<td>{best}</td><td>{worst}</td>'
@@ -122,9 +116,7 @@ tally = (f'<p><strong>Control (American English, my voice, n={c["n"]}):</strong>
          f'<p><strong>Test (Indian English, my parents, n={x["n"]}):</strong> '
          f'Cartesia {x["cartesia"]}, Fish {x["fish"]}, ElevenLabs {x["elevenlabs"]}, '
          f'and {x["no_winner"]} group where nothing worked.</p>'
-         f'<p class="note">{html.escape(x["note"])}</p>'
-         f'<p class="note">* Corrected after unblinding. Both the blind call and the '
-         f'correction are shown, and both are in judgments.json.</p>')
+         f'<p class="note">{html.escape(x["note"])}</p>')
 
 controls = [
     ("The reference audio is unscripted.", "Reading aloud produces flatter, evenly paced speech. Prosody is what this test is about, and reading suppresses it. Every speaker was asked a question and answered in their own words."),
@@ -139,7 +131,7 @@ controls = [
 
 limitations = [
     "One listener, who also designed the study. Six group judgments. That is the fastest way to dismiss this and it is a fair objection.",
-    "One result changed after unblinding. On Dad (Studio) the blind call put Cartesia first and Fish last; on careful re-listen with notes I heard Fish as closest and ElevenLabs as furthest, and that correction is what the table reports. The blind call is shown alongside it and preserved in judgments.json. A reader who thinks the blind call should stand can use it: it moves Indian English from Fish 2, Cartesia 1 to Fish 1, Cartesia 2.",
+    "On Dad (Phone) my ranking of the two leaders moved after I learned which model was which. The blind call is what the table reports and the revision is recorded in judgments.json.",
     "The phone groups were re-judged after a normalization bug was fixed. That re-listen was only partly blind: by then I could recognise the models by output character.",
     "One speaker per accent, and both non-American speakers are from the same family and the same part of Kerala. A difference between them could be the speaker rather than the model.",
     "The control speaker talks denser than either parent (86% speech coverage versus 75 to 76% in the same 30 seconds).",

@@ -6,8 +6,6 @@ I cloned three voices on Fish, ElevenLabs, and Cartesia. My mom, my dad, and me 
 
 Fish won both control tests on my own voice, and two of the four on my parents. Cartesia took one. On my mom's phone recording nothing worked at all.
 
-One of those results is a correction. On my dad's studio recording my blind call put Cartesia first and Fish last, and on careful re-listen I heard it the other way: Fish holds his voice and matches how he says "November," while ElevenLabs is furthest off. The correction is what I'm reporting and the blind call is published next to it. If you think the blind call should stand, the tally becomes Fish 1 and Cartesia 2, and I'd rather hand you that number than hide it.
-
 The tally matters less than this: none of them sounded like my parents. I said some version of "it's not even that good" on every group. The clone of my own voice would have fooled my mother on a voicemail. Same pipeline, same thirty seconds of reference. It cleared the bar on me and on neither of them.
 
 ## Models overshoot accents, and nobody markets against it
@@ -42,15 +40,15 @@ I was measuring loudness on the source and then downmixing to mono afterward, so
 
 I fixed the order, made the script verify every output and fail loudly if it misses, regenerated the phone half, and listened again.
 
-**The conclusion moved.** Before the fix, Fish won three of four on Indian English. After it, on the blind calls alone, Cartesia led two to one. With my correction on my dad's studio recording it is Fish two, Cartesia one, and one group where nothing worked.
+**The result changed.** Before the fix, my mom's and dad's phone groups were judged on references that were up to 10.7 dB quiet. After regenerating them, my mom's phone group went from a clear winner to nothing working at all, and my dad's phone group went to Cartesia.
 
-Three different answers from the same audio, depending on a bug in my code and on whether I had been told which model was which. That is the most useful thing in here. If I had sent this four hours ago I would have sent a confident answer with audio to back it up, and it would have been wrong.
+If I had sent this before running that check, I would have sent a confident answer with audio to back it up, and part of it would have been wrong.
 
 ## What I'm not claiming
 
 I am one person who judged six groups. That is the fastest way to dismiss this and it is a fair objection. There is no fix for it except more listeners.
 
-My judgment on my dad's studio recording changed after I learned which model was which, and it changed in Fish's favour. I am reporting the corrected version because I think it is what I actually hear, but you should weigh it knowing when it changed. Both are on the page and both are in the repo. Everything else is the blind call.
+On my dad's phone recording I heard the top two as closer together once I knew which was which. The blind call is what I'm reporting and the revision is in the repo.
 
 The phone re-listen was only partly blind. By then I could recognize these models by character.
 

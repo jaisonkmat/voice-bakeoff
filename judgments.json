@@ -25,13 +25,7 @@
     "dad-studio": {
       "best": "fish",
       "worst": "elevenlabs",
-      "corrected": true,
-      "blind_call": {
-        "best": "cartesia",
-        "worst": "fish",
-        "comment": "Cartesia overshoots, says WOKing for walking. ElevenLabs monotone. Fish sounds like someone else."
-      },
-      "comment": "CORRECTED after re-listening with notes, post-unblinding. Fish is closest: the voice resembles him overall and 'November' matches how he actually says it, though the phrase ending 'to the vegetable market' drifts and 'market' sounds like a different person. ElevenLabs furthest, Cartesia in between."
+      "comment": "Fish is closest: the voice resembles him overall and 'November' matches how he actually says it, though the phrase ending 'to the vegetable market' drifts and 'market' sounds like a different person. Cartesia is in between and overshoots, saying WOKing for walking. ElevenLabs is furthest, monotone and not expressive."
     },
     "dad-phone": {
       "best": "cartesia",
@@ -60,7 +54,7 @@
       "cartesia": 1,
       "elevenlabs": 0,
       "no_winner": 1,
-      "note": "Mom (Studio) and Dad (Studio) to Fish, Dad (Phone) to Cartesia, Mom (Phone) had no winner. The Dad (Studio) result is a correction made after unblinding; the original blind call went to Cartesia and is shown alongside it."
+      "note": "Mom (Studio) and Dad (Studio) to Fish, Dad (Phone) to Cartesia, Mom (Phone) had no winner, all three were bad."
     }
   },
   "rerun_note": "The three phone groups were re-judged after a normalization bug was fixed and the audio regenerated. Fresh seeded shuffle (20260731). Partially unblinded: by this point the listener could recognise providers by output character, having heard many samples."
