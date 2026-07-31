@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I cloned my parents on three voice AI models</title>
+<style>
+  :root {
+    --bg: #fbfaf8; --fg: #1a1a18; --muted: #6b6862;
+    --line: #e2ded7; --card: #ffffff; --accent: #0b6b5e;
+    --warn: #8a4b2a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14140f; --fg: #eceae4; --muted: #9a968d;
+      --line: #2c2b26; --card: #1c1b17; --accent: #4fd1bd; --warn: #d99a6c;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.65 ui-serif, Georgia, "Times New Roman", serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 64px 24px 120px; }
+  h1 { font-size: 2.2rem; line-height: 1.15; margin: 0 0 12px; letter-spacing: -0.02em; }
+  .dek { font-size: 1.15rem; color: var(--muted); margin: 0 0 8px; }
+  .byline { font-size: .85rem; color: var(--muted); font-family: ui-sans-serif, system-ui, sans-serif;
+            text-transform: uppercase; letter-spacing: .08em; margin-bottom: 48px; }
+  h2 { font-size: 1.05rem; font-family: ui-sans-serif, system-ui, sans-serif;
+       text-transform: uppercase; letter-spacing: .09em; color: var(--muted);
+       margin: 56px 0 18px; font-weight: 600; }
+  blockquote {
+    margin: 0 0 18px; padding: 14px 20px; border-left: 3px solid var(--accent);
+    background: var(--card); font-style: italic; color: var(--fg);
+  }
+  .finding {
+    background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+    padding: 22px 26px; margin: 8px 0 0;
+  }
+  .finding p:last-child { margin-bottom: 0; }
+  .grid { display: grid; gap: 14px; }
+  .speaker {
+    border: 1px solid var(--line); background: var(--card); padding: 20px 22px;
+  }
+  .speaker h3 { margin: 0 0 2px; font-size: 1.1rem; }
+  .speaker .tag {
+    font-family: ui-sans-serif, system-ui, sans-serif; font-size: .72rem;
+    text-transform: uppercase; letter-spacing: .08em; color: var(--muted);
+    margin-bottom: 16px; display: block;
+  }
+  .players { display: grid; grid-template-columns: 92px 1fr; gap: 10px 14px; align-items: center; }
+  .players .who {
+    font-family: ui-sans-serif, system-ui, sans-serif; font-size: .85rem; font-weight: 600;
+  }
+  .players .who.ref { color: var(--muted); font-style: italic; font-weight: 500; }
+  .players .who.ref + .slot { border-style: solid; }
+  audio { width: 100%; height: 34px; }
+  .slot {
+    height: 34px; border: 1px dashed var(--line); display: flex; align-items: center;
+    padding-left: 12px; font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: .78rem; color: var(--muted);
+  }
+  .scroller { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-family: ui-sans-serif, system-ui, sans-serif; font-size: .88rem; }
+  th, td { text-align: left; padding: 9px 14px 9px 0; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th { font-size: .72rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); font-weight: 600; }
+  .loss { border-left: 4px solid var(--warn); background: var(--card); padding: 22px 26px; }
+  footer { margin-top: 72px; padding-top: 24px; border-top: 1px solid var(--line);
+           font-family: ui-sans-serif, system-ui, sans-serif; font-size: .85rem; color: var(--muted); }
+  a { color: var(--accent); }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85em;
+         background: var(--card); padding: 1px 5px; border: 1px solid var(--line); }
+  .note { font-family: ui-sans-serif, system-ui, sans-serif; font-size: .82rem;
+          color: var(--muted); margin-top: 10px; }
+  ol.controls { padding-left: 1.3em; margin: 0; }
+  ol.controls li { margin-bottom: 16px; padding-left: 4px; }
+  ol.controls li::marker { color: var(--accent); font-weight: 700; }
+  ol.controls strong { display: block; margin-bottom: 2px; }
+  .cap { font-family: ui-sans-serif, system-ui, sans-serif; font-size: .74rem;
+         text-transform: uppercase; letter-spacing: .07em; color: var(--muted);
+         margin: 18px 0 8px; padding-top: 12px; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>I cloned my parents on three voice AI models</h1>
+<p class="dek">The company that markets accent preservation won on my American voice and lost on both of my father&#x27;s. Then I found a bug in my own code that had inverted the whole result.</p>
+<p class="byline">Jaison Mathew &middot; July 2026</p>
+
+<h2>The claim</h2>
+<blockquote>"flattened prosody, neutralized vowels, and a distinct loss of accent identity in cloned voices"</blockquote>
+<blockquote>"The Fish S2 Pro model preserves the accent identity of the source voice rather than normalizing toward an American English baseline"</blockquote>
+<p>That is Fish Audio describing what its competitors do wrong and what it does differently. It is a specific, testable claim, so I tested it.</p>
+
+<h2>What I found</h2>
+<p>Fish Audio says competing models flatten non-American accents while theirs preserve them. I have two parents who came here from Kerala in the 1980s, so I tested it.</p>
+<p>I cloned three voices on Fish, ElevenLabs, and Cartesia. My mom, my dad, and me as a control, since I was born in New York and don&#x27;t have their accent. Everyone recorded about a minute of unscripted speech on a studio mic and an iPhone at the same time. Then every clone read the same sentence, one nobody had said, built around the sounds where Indian English and American English split. I listened to all eighteen outputs blind and revealed which was which afterward.</p>
+<p>Fish won both control tests on my own voice, and one of the four on my parents. Cartesia took two. On my mom&#x27;s phone recording nothing worked at all.</p>
+<p>That is not the result I expected, and it is not the result I had a few hours ago. I&#x27;ll get to why.</p>
+<p>The tally matters less than this: none of them sounded like my parents. I said some version of &quot;it&#x27;s not even that good&quot; on every group. The clone of my own voice would have fooled my mother on a voicemail. Same pipeline, same thirty seconds of reference. It cleared the bar on me and on neither of them.</p>
+<h2>Models overshoot accents, and nobody markets against it</h2>
+<p>Fish&#x27;s public claim is about one kind of failure: flattened prosody, neutralized vowels, accents collapsing toward American. Undershoot.</p>
+<p>I heard the opposite failure twice, from two different companies, on the same speaker.</p>
+<p>On my dad&#x27;s studio recording, Cartesia pushed his accent past where he actually takes it, more emphatic and more generic than how he speaks. It said &quot;walking&quot; as &quot;WOKing.&quot; The phonetic term is articulatory overshoot: the articulators travel past their target and every sound comes out over-precise. It had learned the category and not the person. Some words were fine, &quot;so we&quot; sounded like him, then &quot;water&quot; would arrive doing far too much and break it.</p>
+<p>On his phone recording, Fish did the same thing on the same word. Too much weight on &quot;water,&quot; trying the accent too hard.</p>
+<p>So this isn&#x27;t one company&#x27;s bug. On a voice with a strong accent, models overshoot, and the industry only has language for the opposite problem.</p>
+<p>Worth separating two things that fail independently. Cartesia got roughly who my dad was and then performed his accent wrong. Fish, on his studio recording, sounded like a different person entirely. Accent and identity are separate failures with separate fixes, and casual comparisons collapse them.</p>
+<p>One more thing about &quot;WOKing.&quot; I ran all three outputs through speech recognition and every one transcribed &quot;walking&quot; correctly. The distortion is obvious to a human ear and not big enough to break a machine. That makes it a naturalness problem, not an intelligibility one.</p>
+<h2>The clone stops being the person mid-sentence</h2>
+<p>On my mom&#x27;s phone version, the beginning sounded like her, and by the last word, &quot;market,&quot; it was somebody else. Seven seconds.</p>
+<p>I heard the same shape on my dad. Fine at the start, drifting into caricature by the end.</p>
+<h2>Why the result changed</h2>
+<p>I asked a model to attack this study before I published it. Its criticism was that I asserted my loudness normalization worked without ever measuring the output.</p>
+<p>I measured. It had failed on every stereo file, by up to 10.7 dB.</p>
+<p>I was measuring loudness on the source and then downmixing to mono afterward, so the gain was computed for a signal that no longer existed by the time it was written. The iPhone tracks are stereo and their channels partially cancel when summed. Every phone reference went to all three providers far quieter than intended. The mono studio files were fine, which is why the bug was invisible.</p>
+<p>I fixed the order, made the script verify every output and fail loudly if it misses, regenerated the phone half, and listened again.</p>
+<p><strong>The conclusion inverted.</strong> Before the fix, Fish won three of four on Indian English. After it, Cartesia leads two to one. My original result was substantially an artifact of my own bug.</p>
+<p>That is the most useful thing in here. If I had sent it four hours ago I would have sent the wrong answer, confidently, with the audio to back it up.</p>
+<h2>What I&#x27;m not claiming</h2>
+<p>I am one person who judged six groups. That is the fastest way to dismiss this and it is a fair objection. There is no fix for it except more listeners.</p>
+<p>My ranking on my dad&#x27;s recordings moved after I learned which model was which, in both cases toward Fish. The blind calls are what I&#x27;m reporting, with the revisions recorded underneath, because the blind ones are the data and the revisions are what my ears did once they knew the answer.</p>
+<p>The phone re-listen was only partly blind. By then I could recognize these models by character.</p>
+<p>This is a case study, not a result. A proper version needs twenty-odd listeners with no connection to the speakers and dozens of voices per accent. Everything here is published so someone can run that version. What I&#x27;m claiming is that I heard something specific and repeatable, not that I&#x27;ve measured it.</p>
+<h2>What this doesn&#x27;t test</h2>
+<p>Every provider got the same 115 characters of plain text with default settings. No emotion tags, no SSML, no Fish direction tags, no Cartesia controls, no ElevenLabs voice settings. Adding markup to one and not the others would compare my prompting rather than their models. That cuts against Fish, who advertise 15,000 direction tags I never touched.</p>
+<p>Every clone was built from thirty seconds of reference. That is short. I recorded more, between 46 and 104 seconds per person, and cut everyone to the same length because the windows had to match. All three providers got the identical thirty seconds, so it doesn&#x27;t favour any of them, but &quot;none of them sounded like my parents&quot; might not survive three minutes of reference instead of thirty seconds.</p>
+<p>I also only tested instant cloning. ElevenLabs sells professional voice cloning that wants thirty minutes or more and trains a dedicated model. That is probably better and I didn&#x27;t touch it.</p>
+
+<h2>The result</h2>
+<p><strong>Control (American English, my voice, n=2):</strong> Fish won both.</p><p><strong>Test (Indian English, my parents, n=4):</strong> Cartesia 2, Fish 1, ElevenLabs 0, and 1 group where nothing worked.</p><p class="note">Mom (Studio) to Fish. Dad (Studio) and Dad (Phone) to Cartesia. Mom (Phone) had no winner, all three were bad.</p>
+<div class="scroller">
+<table>
+<thead><tr><th>Group</th><th>Closest</th><th>Furthest</th><th>What I heard</th></tr></thead>
+<tbody><tr><td>Jaison (Studio)</td><td>Fish Audio</td><td>Cartesia</td><td class="q">Would fool my mother on a voicemail.</td></tr><tr><td>Jaison (Phone)</td><td>Fish Audio</td><td>&mdash;</td><td class="q">C is so good, it sounds like me. A and B are good too but sound less like me.</td></tr><tr><td>Mom (Studio)</td><td>Fish Audio</td><td>ElevenLabs</td><td class="q">Hard retroflex t preserved on water and waited.</td></tr><tr><td>Mom (Phone)</td><td>no winner</td><td>&mdash;</td><td class="q">They are all bad. None distinguishable.</td></tr><tr><td>Dad (Studio)</td><td>Cartesia</td><td>Fish Audio</td><td class="q">Cartesia overshoots, says WOKing for walking. ElevenLabs monotone. Fish sounds like someone else.</td></tr><tr><td>Dad (Phone)</td><td>Cartesia</td><td>ElevenLabs</td><td class="q">Fish is okay but too extreme on &#x27;water&#x27;, it tries the accent too much. Cartesia sounds like him but subtly different, and is the best. ElevenLabs is very bad.</td></tr></tbody>
+</table>
+</div>
+
+<h2>Listen</h2>
+<div class="grid"><div class="speaker"><h3>Jaison</h3><span class="tag">American English &middot; Control</span><p class="cap">Studio &middot; Condenser mic through Apollo interface. Ideal conditions.</p><div class="players"><span class="who ref">Original</span><audio controls preload="none" src="audio/reference/jaison-studio.mp3"></audio><span class="who">Fish Audio</span><audio controls preload="none" src="audio/fish/jaison-studio.mp3"></audio><span class="who">ElevenLabs</span><audio controls preload="none" src="audio/elevenlabs/jaison-studio.mp3"></audio><span class="who">Cartesia</span><audio controls preload="none" src="audio/cartesia/jaison-studio.mp3"></audio></div><p class="cap">Phone &middot; iPhone Voice Memos, same take. What real customers actually do.</p><div class="players"><span class="who ref">Original</span><audio controls preload="none" src="audio/reference/jaison-phone.mp3"></audio><span class="who">Fish Audio</span><audio controls preload="none" src="audio/fish/jaison-phone.mp3"></audio><span class="who">ElevenLabs</span><audio controls preload="none" src="audio/elevenlabs/jaison-phone.mp3"></audio><span class="who">Cartesia</span><audio controls preload="none" src="audio/cartesia/jaison-phone.mp3"></audio></div></div><div class="speaker"><h3>Mom</h3><span class="tag">Indian English (Kerala) &middot; Test</span><p class="cap">Studio &middot; Condenser mic through Apollo interface. Ideal conditions.</p><div class="players"><span class="who ref">Original</span><audio controls preload="none" src="audio/reference/mom-studio.mp3"></audio><span class="who">Fish Audio</span><audio controls preload="none" src="audio/fish/mom-studio.mp3"></audio><span class="who">ElevenLabs</span><audio controls preload="none" src="audio/elevenlabs/mom-studio.mp3"></audio><span class="who">Cartesia</span><audio controls preload="none" src="audio/cartesia/mom-studio.mp3"></audio></div><p class="cap">Phone &middot; iPhone Voice Memos, same take. What real customers actually do.</p><div class="players"><span class="who ref">Original</span><audio controls preload="none" src="audio/reference/mom-phone.mp3"></audio><span class="who">Fish Audio</span><audio controls preload="none" src="audio/fish/mom-phone.mp3"></audio><span class="who">ElevenLabs</span><audio controls preload="none" src="audio/elevenlabs/mom-phone.mp3"></audio><span class="who">Cartesia</span><audio controls preload="none" src="audio/cartesia/mom-phone.mp3"></audio></div></div><div class="speaker"><h3>Dad</h3><span class="tag">Indian English (Kerala) &middot; Test</span><p class="cap">Studio &middot; Condenser mic through Apollo interface. Ideal conditions.</p><div class="players"><span class="who ref">Original</span><audio controls preload="none" src="audio/reference/dad-studio.mp3"></audio><span class="who">Fish Audio</span><audio controls preload="none" src="audio/fish/dad-studio.mp3"></audio><span class="who">ElevenLabs</span><audio controls preload="none" src="audio/elevenlabs/dad-studio.mp3"></audio><span class="who">Cartesia</span><audio controls preload="none" src="audio/cartesia/dad-studio.mp3"></audio></div><p class="cap">Phone &middot; iPhone Voice Memos, same take. What real customers actually do.</p><div class="players"><span class="who ref">Original</span><audio controls preload="none" src="audio/reference/dad-phone.mp3"></audio><span class="who">Fish Audio</span><audio controls preload="none" src="audio/fish/dad-phone.mp3"></audio><span class="who">ElevenLabs</span><audio controls preload="none" src="audio/elevenlabs/dad-phone.mp3"></audio><span class="who">Cartesia</span><audio controls preload="none" src="audio/cartesia/dad-phone.mp3"></audio></div></div></div>
+<p class="note">Each block starts with the original recording it was cloned from, so the phone clones are judged against the phone original rather than the studio one. Originals are short trimmed clips; the full recordings are not published.</p>
+
+<h2>Latency and cost</h2>
+<div class="scroller">
+<table>
+<thead><tr><th>Provider</th><th>First byte</th><th>Total</th><th>Clone time</th><th>Chars</th></tr></thead>
+<tbody><tr><td>Fish Audio</td><td>241 ms</td><td>1.71 s</td><td>6.6 s</td><td>115</td></tr><tr><td>ElevenLabs</td><td>1003 ms</td><td>1.05 s</td><td>2.1 s</td><td>115</td></tr><tr><td>Cartesia</td><td>243 ms</td><td>1.62 s</td><td>4.1 s</td><td>115</td></tr></tbody>
+</table>
+</div>
+<p class="note"><strong>Why two latency numbers.</strong> On a phone call the caller hears silence until the first byte arrives, so first-byte time is the delay a customer perceives. For video dubbing only total time matters. Same API, different metric depending on who is buying, and on this data they give opposite winners. Medians across 18 cases, three runs each.</p>
+<p class="note">Cost is not compared. Fish publishes $15 per million characters, so its cost is exact. ElevenLabs and Cartesia bill against monthly subscription credits, where an effective per-character price depends entirely on how much of the plan gets used. Characters are recorded for all three instead.</p>
+
+<h2>Method</h2>
+<p>Each speaker recorded roughly a minute of unscripted speech, answering a question about arriving in America. That recording was the cloning reference for all three providers. Every clone then read the same sentence:</p>
+<blockquote>"Last November the weather was very cold, so we waited by the water instead of walking over to the vegetable market."</blockquote>
+<p>No human ever said that sentence. It exists only in the outputs, which is the point: it measures what each model does with words it has never heard in that voice.</p>
+<p>It is also not a random sentence. It is built around the places where Indian English and American English diverge: the v/w contrast in three adjacent pairs, the retroflex t in "water" and "waited", syllable timing in "vegetable" (three syllables in American English, four in Indian English), and pure vowels against diphthongs in "cold" and "over".</p>
+
+<h2>Controls, and why each one is there</h2>
+<ol class="controls">
+<li><strong>The reference audio is unscripted.</strong>Reading aloud produces flatter, evenly paced speech. Prosody is what this test is about, and reading suppresses it. Every speaker was asked a question and answered in their own words.</li><li><strong>The test sentence appears nowhere in any reference.</strong>If the reference contains the words the clone is later asked to say, the model can imitate audio it already heard instead of generalizing. All references were transcribed and checked. Mom&#x27;s recording contains &quot;very cold&quot; at 11.3 to 12.2 seconds, so her window starts at 13.0s to exclude it.</li><li><strong>One speaker is a control.</strong>American English, which all three should handle. Without it, a poor result on the accented voices is ambiguous between an accent problem and a general limit of 30-second cloning.</li><li><strong>Identical input to every provider.</strong>All references trimmed to exactly 30.000s, downmixed to mono, resampled to 48kHz, and loudness-matched to -20 LUFS with two-pass EBU R128 in linear mode, which is one constant gain and no change to dynamics. Source levels ranged from -23.6 to -28.9 LUFS, so matching was necessary. Every output file is measured after processing and the run fails loudly if any file misses target by more than 0.5 LU.</li><li><strong>Fish&#x27;s reference enhancement was disabled.</strong>Fish cleans up reference audio by default. Left on, it would have repaired the phone track while the other two providers received it raw, which would have destroyed the studio versus phone comparison.</li><li><strong>Three runs per case, medians reported.</strong>A single latency sample is noise. The single-run smoke test measured Fish at 519ms; across 18 measurements it is 224ms.</li><li><strong>Both microphones captured the same take.</strong>Studio and phone tracks were aligned in Logic and cut at identical timestamps, so recording quality is the only thing that changes between them.</li><li><strong>Every voice was recorded with consent, for this purpose.</strong>No scraped audio, no film clips, no public figures.</li>
+</ol>
+
+<h2>Limitations</h2>
+<ol class="controls">
+<li>One listener, who also designed the study. Six group judgments. That is the fastest way to dismiss this and it is a fair objection.</li><li>My ranking on both of my dad&#x27;s recordings moved after I learned which model was which, in both cases toward Fish. The blind calls are reported as the result, with the revisions recorded underneath.</li><li>The phone groups were re-judged after a normalization bug was fixed. That re-listen was only partly blind: by then I could recognise the models by output character.</li><li>One speaker per accent, and both non-American speakers are from the same family and the same part of Kerala. A difference between them could be the speaker rather than the model.</li><li>The control speaker talks denser than either parent (86% speech coverage versus 75 to 76% in the same 30 seconds).</li><li>No expressiveness controls were used on any provider. Default settings only, which cuts against Fish and their 15,000 direction tags.</li><li>Thirty seconds of reference audio per clone, which is short. More was recorded (46 to 104 seconds per speaker) and cut to a uniform length because the windows had to match. All three providers received the identical reference, so this does not favour any of them, but it limits the absolute conclusion more than the relative one.</li><li>Only instant voice cloning was tested. ElevenLabs also sells professional voice cloning, which wants 30+ minutes of audio and trains a dedicated model. That tier is likely better and was not tested.</li><li>A discrimination test against a real recording could not be run, because the originals and the clones say different words. That would have required a separate ground-truth recording of each speaker reading the test sentence.</li><li>Fish&#x27;s reference enhancement was disabled so that it would not repair the phone track while the other two received it raw. Defensible for a controlled comparison, but it means this is not a test of each provider&#x27;s default first-use workflow.</li>
+</ol>
+
+<h2>Reproduce this</h2>
+<p>The repo has the harness, the manifest, the raw timings for all 18 cases, the full transcripts with timestamps, and every audio file. The blind listening set is generated by a seeded shuffle, so the arrangement is reproducible and the answer key could not have been adjusted afterward.</p>
+<p>Swap your own recordings into <code>refs/</code> and run it.</p>
+<p><a href="#">github.com/&lt;you&gt;/voice-bakeoff</a></p>
+
+<footer>
+Not affiliated with Fish Audio, ElevenLabs, or Cartesia. All voices recorded and used with the speaker's consent.
+</footer>
+
+</div>
+</body>
+</html>

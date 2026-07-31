@@ -1,0 +1,44 @@
+{
+  "note": "Collision-check output only. Full transcripts are withheld: they contain the speakers' personal accounts of immigrating, which is beyond what they consented to publish. What matters for reproducibility is whether any test-sentence word appears in a reference window, and that is recorded here with timestamps.",
+  "files": {
+    "Studio Mic - Jaison_1": {
+      "segment_count": 304,
+      "speech_span_s": [
+        0.08,
+        103.84
+      ],
+      "collisions": []
+    },
+    "Studio Mic - Mom_1": {
+      "segment_count": 109,
+      "speech_span_s": [
+        0.0,
+        51.12
+      ],
+      "collisions": [
+        {
+          "start": 11.28,
+          "end": 11.52,
+          "words": [
+            "very"
+          ]
+        },
+        {
+          "start": 11.52,
+          "end": 12.16,
+          "words": [
+            "cold"
+          ]
+        }
+      ]
+    },
+    "Studio Mic - Dad_1": {
+      "segment_count": 84,
+      "speech_span_s": [
+        0.0,
+        45.92
+      ],
+      "collisions": []
+    }
+  }
+}

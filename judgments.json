@@ -1,0 +1,66 @@
+{
+  "note": "Single listener. All judgments by the author, recorded before the answer key was revealed except where marked. Providers resolved from the seeded shuffle in .scratch/answer_key.json.",
+  "listener_1_blind": {
+    "jaison-studio": {
+      "best": "fish",
+      "worst": "cartesia",
+      "comment": "Would fool my mother on a voicemail."
+    },
+    "jaison-phone": {
+      "best": "fish",
+      "worst": null,
+      "comment": "C is so good, it sounds like me. A and B are good too but sound less like me."
+    },
+    "mom-studio": {
+      "best": "fish",
+      "worst": "elevenlabs",
+      "comment": "Hard retroflex t preserved on water and waited."
+    },
+    "mom-phone": {
+      "best": null,
+      "worst": null,
+      "no_winner": true,
+      "comment": "They are all bad. None distinguishable."
+    },
+    "dad-studio": {
+      "best": "cartesia",
+      "worst": "fish",
+      "comment": "Cartesia overshoots, says WOKing for walking. ElevenLabs monotone. Fish sounds like someone else."
+    },
+    "dad-phone": {
+      "best": "cartesia",
+      "worst": "elevenlabs",
+      "comment": "Fish is okay but too extreme on 'water', it tries the accent too much. Cartesia sounds like him but subtly different, and is the best. ElevenLabs is very bad."
+    }
+  },
+  "listener_1_informed": {
+    "dad-studio": {
+      "ranking": "cartesia ~= fish > elevenlabs",
+      "conditions": "After the answer key was revealed. Recorded separately because the ranking moved.",
+      "comment": "Fish holds his voice at the start and puts too much weight on the accent by the end. Cartesia has some of him in it. Neither is close."
+    },
+    "dad-phone": {
+      "ranking": "fish ~= cartesia > elevenlabs",
+      "conditions": "After the answer key was revealed. Recorded separately because the ranking moved.",
+      "comment": "Heard Fish and Cartesia as equivalent, with ElevenLabs clearly worst."
+    }
+  },
+  "unresolved": [],
+  "tally": {
+    "control_american_english": {
+      "n": 2,
+      "fish": 2,
+      "elevenlabs": 0,
+      "cartesia": 0
+    },
+    "test_indian_english": {
+      "n": 4,
+      "fish": 1,
+      "cartesia": 2,
+      "elevenlabs": 0,
+      "no_winner": 1,
+      "note": "Mom (Studio) to Fish. Dad (Studio) and Dad (Phone) to Cartesia. Mom (Phone) had no winner, all three were bad."
+    }
+  },
+  "rerun_note": "The three phone groups were re-judged after a normalization bug was fixed and the audio regenerated. Fresh seeded shuffle (20260731). Partially unblinded: by this point the listener could recognise providers by output character, having heard many samples."
+}

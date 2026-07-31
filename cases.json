@@ -1,0 +1,84 @@
+{
+  "test_sentence": "Last November the weather was very cold, so we waited by the water instead of walking over to the vegetable market.",
+
+  "reference_prompt": "Their first experience coming to America and what they remember.",
+
+  "runs_per_case": 3,
+
+  "listen_for": [
+    "water / waited: hard retroflex t, or soft American flap d?",
+    "weather was very: are w and v the same sound, or distinct?",
+    "vegetable: three syllables or four?",
+    "cold / over: gliding diphthong, or pure vowel?",
+    "overall rhythm: even syllables, or English stress-and-mumble?"
+  ],
+
+  "reference_seconds": 30,
+
+  "speakers": [
+    {
+      "id": "jaison",
+      "label": "Jaison",
+      "accent": "American English",
+      "role": "control",
+      "files": {"studio": "Studio Mic - Jaison_1.wav", "phone": "Iphone - Jaison_1.wav"},
+      "window_start": 0.0,
+      "window_note": "No collisions anywhere in 304 segments. Starts at 0.0s on a natural conversational opening. 86% speech coverage, denser than either parent at 75-76%, which is noted as a limitation."
+    },
+    {
+      "id": "mom",
+      "label": "Mom",
+      "accent": "Indian English (Kerala)",
+      "role": "test",
+      "files": {"studio": "Studio Mic - Mom_1.wav", "phone": "Iphone - Mom_1.wav"},
+      "window_start": 13.0,
+      "window_note": "Starts at 13.0s to clear a collision: she says 'very cold' at 11.3-12.2s, and both words are in the test sentence. 76% speech coverage."
+    },
+    {
+      "id": "dad",
+      "label": "Dad",
+      "accent": "Indian English (Kerala)",
+      "role": "test",
+      "files": {"studio": "Studio Mic - Dad_1.wav", "phone": "Iphone - Dad.wav"},
+      "window_start": 0.0,
+      "window_note": "No collisions anywhere in 84 segments. Starts at 0.0s on a clean sentence opening. 75% speech coverage."
+    }
+  ],
+
+  "captures": [
+    {
+      "id": "studio",
+      "label": "Studio",
+      "note": "Condenser mic through Apollo interface. Ideal conditions.",
+      "ext": "wav"
+    },
+    {
+      "id": "phone",
+      "label": "Phone",
+      "note": "iPhone Voice Memos, same take. What real customers actually do.",
+      "ext": "m4a"
+    }
+  ],
+
+  "providers": [
+    {
+      "id": "fish",
+      "label": "Fish Audio",
+      "model": "s2.1-pro",
+      "price_per_million_chars": 15.0
+    },
+    {
+      "id": "elevenlabs",
+      "label": "ElevenLabs",
+      "model": "eleven_multilingual_v2",
+      "price_per_million_chars": null
+    },
+    {
+      "id": "cartesia",
+      "label": "Cartesia",
+      "model": "sonic-2",
+      "api_version": "2025-04-16",
+      "price_per_million_chars": null
+    }
+  ]
+}

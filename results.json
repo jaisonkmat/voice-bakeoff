@@ -1,0 +1,475 @@
+{
+  "test_sentence": "Last November the weather was very cold, so we waited by the water instead of walking over to the vegetable market.",
+  "runs_per_case": 3,
+  "results": [
+    {
+      "speaker": "jaison",
+      "speaker_label": "Jaison",
+      "accent": "American English",
+      "role": "control",
+      "capture": "studio",
+      "capture_label": "Studio",
+      "provider": "fish",
+      "chars": 115,
+      "clone_seconds": 7.72,
+      "ttfb_ms": [
+        589,
+        220,
+        216
+      ],
+      "total_s": [
+        1.582,
+        1.244,
+        1.324
+      ],
+      "ttfb_median_ms": 220,
+      "total_median_s": 1.324,
+      "bytes": 104488,
+      "audio": "audio/fish/jaison-studio.mp3",
+      "cost_usd": 0.001725
+    },
+    {
+      "speaker": "jaison",
+      "speaker_label": "Jaison",
+      "accent": "American English",
+      "role": "control",
+      "capture": "studio",
+      "capture_label": "Studio",
+      "provider": "elevenlabs",
+      "chars": 115,
+      "clone_seconds": 2.87,
+      "ttfb_ms": [
+        1238,
+        922,
+        947
+      ],
+      "total_s": [
+        1.29,
+        0.964,
+        0.999
+      ],
+      "ttfb_median_ms": 947,
+      "total_median_s": 0.999,
+      "bytes": 96593,
+      "audio": "audio/elevenlabs/jaison-studio.mp3",
+      "cost_usd": null
+    },
+    {
+      "speaker": "mom",
+      "speaker_label": "Mom",
+      "accent": "Indian English (Kerala)",
+      "role": "test",
+      "capture": "studio",
+      "capture_label": "Studio",
+      "provider": "fish",
+      "chars": 115,
+      "clone_seconds": 6.26,
+      "ttfb_ms": [
+        631,
+        215,
+        221
+      ],
+      "total_s": [
+        1.931,
+        1.789,
+        1.669
+      ],
+      "ttfb_median_ms": 221,
+      "total_median_s": 1.789,
+      "bytes": 122879,
+      "audio": "audio/fish/mom-studio.mp3",
+      "cost_usd": 0.001725
+    },
+    {
+      "speaker": "mom",
+      "speaker_label": "Mom",
+      "accent": "Indian English (Kerala)",
+      "role": "test",
+      "capture": "studio",
+      "capture_label": "Studio",
+      "provider": "elevenlabs",
+      "chars": 115,
+      "clone_seconds": 2.1,
+      "ttfb_ms": [
+        1246,
+        1120,
+        1000
+      ],
+      "total_s": [
+        1.288,
+        1.169,
+        1.057
+      ],
+      "ttfb_median_ms": 1120,
+      "total_median_s": 1.169,
+      "bytes": 102445,
+      "audio": "audio/elevenlabs/mom-studio.mp3",
+      "cost_usd": null
+    },
+    {
+      "speaker": "mom",
+      "speaker_label": "Mom",
+      "accent": "Indian English (Kerala)",
+      "role": "test",
+      "capture": "studio",
+      "capture_label": "Studio",
+      "provider": "cartesia",
+      "chars": 115,
+      "clone_seconds": 4.11,
+      "ttfb_ms": [
+        364,
+        246,
+        221
+      ],
+      "total_s": [
+        1.857,
+        1.772,
+        1.447
+      ],
+      "ttfb_median_ms": 246,
+      "total_median_s": 1.772,
+      "bytes": 112058,
+      "audio": "audio/cartesia/mom-studio.mp3",
+      "cost_usd": null
+    },
+    {
+      "speaker": "dad",
+      "speaker_label": "Dad",
+      "accent": "Indian English (Kerala)",
+      "role": "test",
+      "capture": "studio",
+      "capture_label": "Studio",
+      "provider": "fish",
+      "chars": 115,
+      "clone_seconds": 5.49,
+      "ttfb_ms": [
+        648,
+        254,
+        205
+      ],
+      "total_s": [
+        1.978,
+        1.434,
+        1.665
+      ],
+      "ttfb_median_ms": 254,
+      "total_median_s": 1.665,
+      "bytes": 133328,
+      "audio": "audio/fish/dad-studio.mp3",
+      "cost_usd": 0.001725
+    },
+    {
+      "speaker": "dad",
+      "speaker_label": "Dad",
+      "accent": "Indian English (Kerala)",
+      "role": "test",
+      "capture": "studio",
+      "capture_label": "Studio",
+      "provider": "elevenlabs",
+      "chars": 115,
+      "clone_seconds": 1.94,
+      "ttfb_ms": [
+        1277,
+        995,
+        944
+      ],
+      "total_s": [
+        1.338,
+        1.038,
+        1.017
+      ],
+      "ttfb_median_ms": 995,
+      "total_median_s": 1.038,
+      "bytes": 107042,
+      "audio": "audio/elevenlabs/dad-studio.mp3",
+      "cost_usd": null
+    },
+    {
+      "speaker": "dad",
+      "speaker_label": "Dad",
+      "accent": "Indian English (Kerala)",
+      "role": "test",
+      "capture": "studio",
+      "capture_label": "Studio",
+      "provider": "cartesia",
+      "chars": 115,
+      "clone_seconds": 4.09,
+      "ttfb_ms": [
+        235,
+        176,
+        172
+      ],
+      "total_s": [
+        1.676,
+        1.403,
+        1.662
+      ],
+      "ttfb_median_ms": 176,
+      "total_median_s": 1.662,
+      "bytes": 127104,
+      "audio": "audio/cartesia/dad-studio.mp3",
+      "cost_usd": null
+    },
+    {
+      "speaker": "jaison",
+      "speaker_label": "Jaison",
+      "accent": "American English",
+      "role": "control",
+      "capture": "studio",
+      "capture_label": "Studio",
+      "provider": "cartesia",
+      "chars": 115,
+      "clone_seconds": 4.11,
+      "ttfb_ms": [
+        376,
+        224,
+        240
+      ],
+      "total_s": [
+        1.523,
+        1.589,
+        1.51
+      ],
+      "ttfb_median_ms": 240,
+      "total_median_s": 1.523,
+      "bytes": 80711,
+      "audio": "audio/cartesia/jaison-studio.mp3",
+      "cost_usd": null,
+      "note": "Retried after an HTTP 504 gateway timeout from Cartesia on the first attempt."
+    },
+    {
+      "speaker": "jaison",
+      "speaker_label": "Jaison",
+      "accent": "American English",
+      "role": "control",
+      "capture": "phone",
+      "capture_label": "Phone",
+      "provider": "fish",
+      "chars": 115,
+      "clone_seconds": 6.94,
+      "ttfb_ms": [
+        569,
+        239,
+        208
+      ],
+      "total_s": [
+        1.437,
+        1.599,
+        1.241
+      ],
+      "ttfb_median_ms": 239,
+      "total_median_s": 1.437,
+      "bytes": 90278,
+      "audio": "audio/fish/jaison-phone.mp3",
+      "cost_usd": 0.001725
+    },
+    {
+      "speaker": "jaison",
+      "speaker_label": "Jaison",
+      "accent": "American English",
+      "role": "control",
+      "capture": "phone",
+      "capture_label": "Phone",
+      "provider": "elevenlabs",
+      "chars": 115,
+      "clone_seconds": 1.98,
+      "ttfb_ms": [
+        1445,
+        957,
+        1262
+      ],
+      "total_s": [
+        1.503,
+        0.998,
+        1.312
+      ],
+      "ttfb_median_ms": 1262,
+      "total_median_s": 1.312,
+      "bytes": 97429,
+      "audio": "audio/elevenlabs/jaison-phone.mp3",
+      "cost_usd": null
+    },
+    {
+      "speaker": "jaison",
+      "speaker_label": "Jaison",
+      "accent": "American English",
+      "role": "control",
+      "capture": "phone",
+      "capture_label": "Phone",
+      "provider": "cartesia",
+      "chars": 115,
+      "clone_seconds": 4.02,
+      "ttfb_ms": [
+        415,
+        224,
+        314
+      ],
+      "total_s": [
+        2.236,
+        1.417,
+        1.311
+      ],
+      "ttfb_median_ms": 314,
+      "total_median_s": 1.417,
+      "bytes": 109968,
+      "audio": "audio/cartesia/jaison-phone.mp3",
+      "cost_usd": null
+    },
+    {
+      "speaker": "mom",
+      "speaker_label": "Mom",
+      "accent": "Indian English (Kerala)",
+      "role": "test",
+      "capture": "phone",
+      "capture_label": "Phone",
+      "provider": "fish",
+      "chars": 115,
+      "clone_seconds": 7.19,
+      "ttfb_ms": [
+        576,
+        243,
+        227
+      ],
+      "total_s": [
+        1.747,
+        1.746,
+        1.725
+      ],
+      "ttfb_median_ms": 243,
+      "total_median_s": 1.746,
+      "bytes": 115355,
+      "audio": "audio/fish/mom-phone.mp3",
+      "cost_usd": 0.001725
+    },
+    {
+      "speaker": "mom",
+      "speaker_label": "Mom",
+      "accent": "Indian English (Kerala)",
+      "role": "test",
+      "capture": "phone",
+      "capture_label": "Phone",
+      "provider": "elevenlabs",
+      "chars": 115,
+      "clone_seconds": 2.45,
+      "ttfb_ms": [
+        1270,
+        986,
+        944
+      ],
+      "total_s": [
+        1.329,
+        1.051,
+        0.995
+      ],
+      "ttfb_median_ms": 986,
+      "total_median_s": 1.051,
+      "bytes": 118745,
+      "audio": "audio/elevenlabs/mom-phone.mp3",
+      "cost_usd": null
+    },
+    {
+      "speaker": "mom",
+      "speaker_label": "Mom",
+      "accent": "Indian English (Kerala)",
+      "role": "test",
+      "capture": "phone",
+      "capture_label": "Phone",
+      "provider": "cartesia",
+      "chars": 115,
+      "clone_seconds": 4.34,
+      "ttfb_ms": [
+        400,
+        228,
+        226
+      ],
+      "total_s": [
+        1.777,
+        1.579,
+        1.221
+      ],
+      "ttfb_median_ms": 228,
+      "total_median_s": 1.579,
+      "bytes": 89070,
+      "audio": "audio/cartesia/mom-phone.mp3",
+      "cost_usd": null
+    },
+    {
+      "speaker": "dad",
+      "speaker_label": "Dad",
+      "accent": "Indian English (Kerala)",
+      "role": "test",
+      "capture": "phone",
+      "capture_label": "Phone",
+      "provider": "fish",
+      "chars": 115,
+      "clone_seconds": 6.01,
+      "ttfb_ms": [
+        979,
+        254,
+        691
+      ],
+      "total_s": [
+        2.333,
+        2.348,
+        2.121
+      ],
+      "ttfb_median_ms": 691,
+      "total_median_s": 2.333,
+      "bytes": 115355,
+      "audio": "audio/fish/dad-phone.mp3",
+      "cost_usd": 0.001725
+    },
+    {
+      "speaker": "dad",
+      "speaker_label": "Dad",
+      "accent": "Indian English (Kerala)",
+      "role": "test",
+      "capture": "phone",
+      "capture_label": "Phone",
+      "provider": "elevenlabs",
+      "chars": 115,
+      "clone_seconds": 2.1,
+      "ttfb_ms": [
+        1451,
+        1011,
+        977
+      ],
+      "total_s": [
+        1.505,
+        1.058,
+        1.028
+      ],
+      "ttfb_median_ms": 1011,
+      "total_median_s": 1.058,
+      "bytes": 112894,
+      "audio": "audio/elevenlabs/dad-phone.mp3",
+      "cost_usd": null
+    },
+    {
+      "speaker": "dad",
+      "speaker_label": "Dad",
+      "accent": "Indian English (Kerala)",
+      "role": "test",
+      "capture": "phone",
+      "capture_label": "Phone",
+      "provider": "cartesia",
+      "chars": 115,
+      "clone_seconds": 4.28,
+      "ttfb_ms": [
+        365,
+        352,
+        352
+      ],
+      "total_s": [
+        2.471,
+        2.129,
+        3.066
+      ],
+      "ttfb_median_ms": 352,
+      "total_median_s": 2.471,
+      "bytes": 112058,
+      "audio": "audio/cartesia/dad-phone.mp3",
+      "cost_usd": null
+    }
+  ]
+}
